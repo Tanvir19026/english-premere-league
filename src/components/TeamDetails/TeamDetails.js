@@ -6,13 +6,14 @@ import youtube from '../../images/YouTube.png';
 import twitter from '../../images/Twitter.png';
 import Male from '../../images/male.png';
 import Female from '../../images/female.png';
+import { Link } from 'react-router-dom';
 
 
 
 
 const TeamDetails = (props) => {
     const [team, setTeam] = useState({});
-    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strStadiumThumb, strDescriptionEN } = team;
+    const { intFormedYear,strTeam, strCountry, strGender, strTeamBanner, strStadiumThumb, strDescriptionEN } = team;
     const { idTeam } = useParams();
 
     useEffect(() => {
@@ -53,7 +54,7 @@ const TeamDetails = (props) => {
             </div>
             <p>{strDescriptionEN}</p>
             <div className="social-container">
-                <img src={fb} />
+             <img src={fb} />
                 <img src={youtube} />
                 <img src={twitter} />
 

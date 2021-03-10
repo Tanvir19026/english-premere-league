@@ -1,0 +1,17 @@
+.headline{
+    background-image: url('../../images/joumf8y3pzk2sx4owem2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+   
+    height: 300px;
+    margin-left: 10px;
+   
+}
+.headline h1{
+   padding-top:80px;
+   color:yellow;
+   font-size:55px;
+   text-shadow: 10px 10px 20px blue;
+   font: 900;
+}

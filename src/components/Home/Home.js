@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Team from '../Team/Team';
+import banner from '../../images/joumf8y3pzk2sx4owem2.jpg';
+import './Home.css';
 
 const Home = () => {
     const [teams,setTeams]=useState([])
@@ -17,12 +19,23 @@ const Home = () => {
     
     return (
         <div>
-            <h2>Number of team : {teams.length}</h2>
+        
+
+        <div className="col-md-12 headline ">
+        <h1>English Premier League</h1>
+       </div>
+            
+            <div style={{backgroundColor:'black'}} className="row">
+               
+           
             {
                teams.map(team => <Team team={team}></Team>)
             }
-          
-        </div>
+
+            </div>
+           
+            </div>
+       
     );
 };
 
