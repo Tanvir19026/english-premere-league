@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from './components/Home/Home';
 import Nomatch from './components/Nomatch/Nomatch';
+import TeamDetails from './components/TeamDetails/TeamDetails';
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
         <Switch>
           <Route path="/home">
             <Home></Home>
+          </Route>
+          
+          <Route path="/team/:idTeam">
+            <TeamDetails></TeamDetails>
           </Route>
 
           <Route exact path="/">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Team from '../Team/Team';
 
 const Home = () => {
     const [teams,setTeams]=useState([])
@@ -18,7 +19,7 @@ const Home = () => {
         <div>
             <h2>Number of team : {teams.length}</h2>
             {
-               teams.map(team => <li>{team.strTeam}</li>)
+               teams.map(team => <Team team={team}></Team>)
             }
           
         </div>
