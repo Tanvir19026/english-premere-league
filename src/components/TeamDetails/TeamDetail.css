@@ -2,27 +2,20 @@
     display: flex;
     width:50%;
     margin: 0 auto;
-    margin-right:60px;
+  
    
 }
 .social-container img{
-  width:7%;
-  margin: 12px;
+  width:20%;
+  margin: 10px;
   cursor: pointer;
 }
-/* .club-details{
-    display: flex;
-    width: 90%;
-    margin: 10px;
-    padding: 10px;
-    background-color: red;
-    margin-left: 20px;
-    
-} */
+
 .playerImage img{
     margin-top:15px;
     width:300px;
-    margin-left: 200px;
+    margin-left: 20px;
+ 
    
 }
 .banner-design{
@@ -35,6 +28,25 @@
 }
 .icon-design{
     padding:2px;
-    margin: 2px;
+    margin: 10px;
+}
+.justify-content-md-center {
+    width: 70%;
+    
 }
 
+@media screen and (max-width:600px)
+{
+    .banner-design img{
+        display: flex;
+        flex-direction: column;
+    }
+  .banner-design img{
+      width: 50%;
+  }
+  .playerImage img{
+   width:90%;
+  }
+  
+
+}

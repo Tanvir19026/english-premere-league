@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Team from '../Team/Team';
 import banner from '../../images/joumf8y3pzk2sx4owem2.jpg';
+import eplLogo from '../../images/wp1830650.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -22,6 +23,8 @@ const Home = () => {
         
 
         <div className="col-md-12 headline ">
+        
+        <img style={{width:'190px'}}src={eplLogo} srcset=""/>
         <h1>English Premier League</h1>
        </div>
             

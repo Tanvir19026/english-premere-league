@@ -20,7 +20,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const TeamDetails = (props) => {
     const [team, setTeam] = useState({});
-    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strSport, strDescriptionEN,strFacebook ,strTwitter,strYoutube} = team;
+    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strSport, strDescriptionEN } = team;
     const { idTeam } = useParams();
 
     useEffect(() => {
@@ -38,60 +38,67 @@ const TeamDetails = (props) => {
     }
 
     return (
+
+
         <div>
-<Container>
-  <Row>
-    <Col><img className="banner-design "src={strTeamBanner} alt="" srcset="" /></Col>
-  </Row>
-</Container>
+            <Container>
+                <Row>
+                    <Col><img className="banner-design " src={strTeamBanner} alt="" srcset="" /></Col>
+                </Row>
+            </Container> 
 
+            <div style={{ backgroundColor: 'black' }}>
+                <Container style={{ marginRight: '1px' }} >
+                    <Row style={{ backgroundColor: 'grey', borderRadius: '15px', color: 'white' }} className="justify-content-md-center m-3">
+                        <Col md="auto" className="icon-design" >
+                            <h1> {strTeam}</h1>
+                            <p><img src={country} />  Country:{strCountry}</p>
+                            <p> <img src={FoundedFlag} /> Founded : {intFormedYear}</p>
+                            <p><img src={sportsType} />   sport type : {strSport}</p>
+                            <img src={genderIcon} />     Gender : {strGender}
 
-            
+                        </Col>
+                        <Col className="col-md-6 playerImg">
+                            {
+                                ShowImage(strGender)
+                            }
+                        </Col>
 
- <Container >
-  <Row style={{backgroundColor:'grey',borderRadius:'15px', color:'white'}}className="justify-content-md-center m-3">
-    <Col md="auto" className="icon-design">
-                    <h1> {strTeam}</h1>
-                    <p><img src={country} alt="" srcset=""/>  Country:{strCountry}</p>
-                    <p> <img src={FoundedFlag} alt="" srcset=""/> Founded : {intFormedYear}</p>
-                   <p><img src={sportsType} alt="" srcset=""/>   sport type : {strSport}</p> 
-                    <img src={genderIcon} alt="" srcset=""/>     Gender : {strGender}
+                    </Row>
 
-    </Col>
-    <Col className="col-md-6">
-                    {
-                        ShowImage(strGender)
-                    }
-    </Col>
-    
-  </Row>
-  
-</Container> 
-
+                </Container> 
 
 
 
-
-<Container fluid="md">
-  <Row>
-    <Col md={12}><p>{strDescriptionEN}</p></Col>
-    
-  </Row>
-</Container>
+ 
+             
 
 
 
-           
-            
-            <div className="social-container">
-               <img src={fb} />  
-            <img src={youtube} />
-                     <img src={twitter} />
-                    
+
+                <Container fluid="md">
+                    <Row>
+                        <Col md={12} style={{ textAlign: 'justify', color: 'white' }}><p>{strDescriptionEN}</p></Col>
+
+                    </Row>
+                </Container>
+
+
+
+
+
+                <div className="social-container">
+                    <a target="_blank" href="https://www.facebook.com" > <img src={fb} /></a>
+
+
+                    <a href="https://www.youtube.com"target="_blank" ><img src={youtube} /></a>
+                    <a href="https://twitter.com" target="_blank"> <img src={twitter} /></a>
+
+                </div>
             </div>
-        </div>
-
-
+</div>
+        
+    
 
 
 
@@ -99,3 +106,13 @@ const TeamDetails = (props) => {
 };
 
 export default TeamDetails;
+
+
+
+
+
+
+
+
+
+
