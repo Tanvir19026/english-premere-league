@@ -20,7 +20,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const TeamDetails = (props) => {
     const [team, setTeam] = useState({});
-    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strSport, strDescriptionEN } = team;
+    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strSport, strDescriptionEN,strFacebook ,strTwitter,strYoutube} = team;
     const { idTeam } = useParams();
 
     useEffect(() => {
@@ -28,7 +28,7 @@ const TeamDetails = (props) => {
         fetch(url)
             .then(res => res.json())
             .then(data => setTeam(data.teams[0]))
-    }, idTeam)
+    }, [idTeam])
 
     function ShowImage(strGender) {
         if (strGender === 'Female')
@@ -70,17 +70,6 @@ const TeamDetails = (props) => {
 
 
 
-<Container >
-<Row >
-    <Col xs={12} md={8}>
-  
-    </Col>
-    <Col xs={6} md={4}>
-    </Col>
-  </Row>
-  </Container>
-
-
 
 
 <Container fluid="md">
@@ -95,11 +84,10 @@ const TeamDetails = (props) => {
            
             
             <div className="social-container">
-                <Link to="/home">
-                    <img src={fb} />
-                    <img src={youtube} />
-                    <img src={twitter} />
-                </Link>
+               <img src={fb} />  
+            <img src={youtube} />
+                     <img src={twitter} />
+                    
             </div>
         </div>
 
