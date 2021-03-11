@@ -2,18 +2,25 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import './TeamDetail.css';
 import fb from '../../images/Facebook.png';
+import sportsType from '../../images/football (1) 1.png';
+import country from '../../images/flag (1) 1.png';
+import FoundedFlag from '../../images/found 1.png';
+import genderIcon from '../../images/male-gender-sign 1.png';
+
 import youtube from '../../images/YouTube.png';
 import twitter from '../../images/Twitter.png';
 import Male from '../../images/male.png';
 import Female from '../../images/female.png';
 import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 
 
 
 const TeamDetails = (props) => {
     const [team, setTeam] = useState({});
-    const { intFormedYear,strTeam, strCountry, strGender, strTeamBanner, strStadiumThumb, strDescriptionEN } = team;
+    const { intFormedYear, strTeam, strCountry, strGender, strTeamBanner, strSport, strDescriptionEN } = team;
     const { idTeam } = useParams();
 
     useEffect(() => {
@@ -32,32 +39,67 @@ const TeamDetails = (props) => {
 
     return (
         <div>
-            <div>
-                <img src={strTeamBanner} alt="" srcset="" />
-            </div>
+<Container>
+  <Row>
+    <Col><img className="banner-design "src={strTeamBanner} alt="" srcset="" /></Col>
+  </Row>
+</Container>
 
-            <div className="club-details">
-                <div>
-                    <p> {strTeam}</p>
-                    <p>Country : {strCountry}</p>
-                    <p>Founded : {intFormedYear}</p>
-                    <p>Gender : {strGender}</p>
-                    
-                </div>
-                <div >
+
+            
+
+ <Container >
+  <Row style={{backgroundColor:'grey',borderRadius:'15px', color:'white'}}className="justify-content-md-center m-3">
+    <Col md="auto" className="icon-design">
+                    <h1> {strTeam}</h1>
+                    <p><img src={country} alt="" srcset=""/>  Country:{strCountry}</p>
+                    <p> <img src={FoundedFlag} alt="" srcset=""/> Founded : {intFormedYear}</p>
+                   <p><img src={sportsType} alt="" srcset=""/>   sport type : {strSport}</p> 
+                    <img src={genderIcon} alt="" srcset=""/>     Gender : {strGender}
+
+    </Col>
+    <Col className="col-md-6">
                     {
                         ShowImage(strGender)
                     }
+    </Col>
+    
+  </Row>
+  
+</Container> 
 
-                </div>
 
-            </div>
-            <p>{strDescriptionEN}</p>
+
+<Container >
+<Row >
+    <Col xs={12} md={8}>
+  
+    </Col>
+    <Col xs={6} md={4}>
+    </Col>
+  </Row>
+  </Container>
+
+
+
+
+<Container fluid="md">
+  <Row>
+    <Col md={12}><p>{strDescriptionEN}</p></Col>
+    
+  </Row>
+</Container>
+
+
+
+           
+            
             <div className="social-container">
-             <img src={fb} />
-                <img src={youtube} />
-                <img src={twitter} />
-
+                <Link to="/home">
+                    <img src={fb} />
+                    <img src={youtube} />
+                    <img src={twitter} />
+                </Link>
             </div>
         </div>
 

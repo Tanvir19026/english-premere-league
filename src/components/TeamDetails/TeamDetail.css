@@ -10,7 +10,7 @@
   margin: 12px;
   cursor: pointer;
 }
-.club-details{
+/* .club-details{
     display: flex;
     width: 90%;
     margin: 10px;
@@ -18,10 +18,23 @@
     background-color: red;
     margin-left: 20px;
     
-}
+} */
 .playerImage img{
+    margin-top:15px;
     width:300px;
     margin-left: 200px;
    
+}
+.banner-design{
+    margin-left:35px;
+
+}
+.icon-design img {
+    width: 15px;
+   
+}
+.icon-design{
+    padding:2px;
+    margin: 2px;
 }
 

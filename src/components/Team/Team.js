@@ -22,8 +22,8 @@ const Team = (props) => {
     
                 <Card.Body className="card-design">
                 <Card.Img src={strTeamBadge} />
-                    <Card.Title>{strTeam}</Card.Title>
-                     <p>Sports Type : {strSport}</p>
+                    <Card.Title className="clubName">{strTeam}</Card.Title>
+                     <p className="type">Sports Type : {strSport}</p>
                     <Button onClick={() => handlebutton(idTeam)} variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card.Body>
             </Card>
