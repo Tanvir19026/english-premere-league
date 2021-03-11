@@ -3,12 +3,11 @@
     width:50%;
     margin: 0 auto;
   
-   
 }
 .social-container img{
   width:20%;
   margin: 10px;
-  cursor: pointer;
+  
 }
 
 .playerImage img{
@@ -16,37 +15,19 @@
     width:300px;
     margin-left: 20px;
  
-   
 }
 .banner-design{
     margin-left:35px;
-
 }
 .icon-design img {
-    width: 15px;
-   
+    width: 15px; 
 }
 .icon-design{
     padding:2px;
     margin: 10px;
 }
 .justify-content-md-center {
-    width: 70%;
+    width: 80%;
     
-}
-
-@media screen and (max-width:600px)
-{
-    .banner-design img{
-        display: flex;
-        flex-direction: column;
-    }
-  .banner-design img{
-      width: 50%;
-  }
-  .playerImage img{
-   width:90%;
-  }
-  
-
+    
 }

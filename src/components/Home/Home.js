@@ -13,31 +13,21 @@ const Home = () => {
     fetch(url)
     .then(res => res.json())
     .then(data => setTeams(data.teams))
-    
-     
-
     },[])
     
     return (
         <div>
-        
-
         <div className="col-md-12 headline ">
-        
         <img style={{width:'190px'}}src={eplLogo} srcset=""/>
         <h1>English Premier League</h1>
-       </div>
-            
+
+       </div> 
             <div style={{backgroundColor:'black'}} className="row">
-               
-           
             {
                teams.map(team => <Team team={team}></Team>)
             }
-
-            </div>
-           
-            </div>
+            </div> 
+        </div> 
        
     );
 };

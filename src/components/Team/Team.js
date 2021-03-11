@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router';
 import { Button, Card } from 'react-bootstrap';
 import './Team.css';
@@ -18,12 +18,11 @@ const Team = (props) => {
     return (
    
         <div className="col-md-4 ">
-    <Card className="card-design" style={{ width: '18rem' }}>
-    
+         <Card className="card-design" style={{ width: '18rem' }}>
                 <Card.Body className="card-design">
                 <Card.Img src={strTeamBadge} />
                     <Card.Title className="clubName">{strTeam}</Card.Title>
-                     <p className="type">Sports Type : {strSport}</p>
+                     <p className="sportstype">Sports Type : {strSport}</p>
                     <Button onClick={() => handlebutton(idTeam)} variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
                 </Card.Body>
             </Card>

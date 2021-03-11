@@ -30,12 +30,6 @@ function App() {
         <Route path="*">
         <Nomatch></Nomatch>
         </Route>
-          
-
-
-
-
-
         </Switch>
       </Router>
     </div>

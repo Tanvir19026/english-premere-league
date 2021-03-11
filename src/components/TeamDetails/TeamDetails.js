@@ -6,12 +6,10 @@ import sportsType from '../../images/football (1) 1.png';
 import country from '../../images/flag (1) 1.png';
 import FoundedFlag from '../../images/found 1.png';
 import genderIcon from '../../images/male-gender-sign 1.png';
-
 import youtube from '../../images/YouTube.png';
 import twitter from '../../images/Twitter.png';
 import Male from '../../images/male.png';
 import Female from '../../images/female.png';
-import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
@@ -49,7 +47,7 @@ const TeamDetails = (props) => {
 
             <div style={{ backgroundColor: 'black' }}>
                 <Container style={{ marginRight: '1px' }} >
-                    <Row style={{ backgroundColor: 'grey', borderRadius: '15px', color: 'white' }} className="justify-content-md-center m-3">
+                    <Row style={{ backgroundColor: 'grey', borderRadius: '15px', color: 'white' }} className="justify-content-md-center">
                         <Col md="auto" className="icon-design" >
                             <h1> {strTeam}</h1>
                             <p><img src={country} />  Country:{strCountry}</p>
@@ -70,12 +68,6 @@ const TeamDetails = (props) => {
 
 
 
- 
-             
-
-
-
-
                 <Container fluid="md">
                     <Row>
                         <Col md={12} style={{ textAlign: 'justify', color: 'white' }}><p>{strDescriptionEN}</p></Col>
@@ -84,23 +76,13 @@ const TeamDetails = (props) => {
                 </Container>
 
 
-
-
-
                 <div className="social-container">
                     <a target="_blank" href="https://www.facebook.com" > <img src={fb} /></a>
-
-
                     <a href="https://www.youtube.com"target="_blank" ><img src={youtube} /></a>
                     <a href="https://twitter.com" target="_blank"> <img src={twitter} /></a>
-
                 </div>
             </div>
 </div>
-        
-    
-
-
 
     );
 };
